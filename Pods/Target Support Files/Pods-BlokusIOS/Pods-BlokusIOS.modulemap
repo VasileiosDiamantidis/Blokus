@@ -1,0 +1,6 @@
+framework module Pods_BlokusIOS {
+  umbrella header "Pods-BlokusIOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

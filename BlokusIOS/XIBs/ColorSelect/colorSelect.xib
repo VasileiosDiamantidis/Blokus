@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="colorSelect" customModule="BlokusIOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="308" height="343"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MII-TF-CCW">
+                    <rect key="frame" x="0.0" y="0.0" width="308.5" height="343"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gNT-At-Fxn">
+                            <rect key="frame" x="0.0" y="0.0" width="308.5" height="34.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select A Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWy-Pb-yYt">
+                                    <rect key="frame" x="0.0" y="0.0" width="277.5" height="34.5"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAB-ll-uof">
+                                    <rect key="frame" x="277.5" y="0.0" width="31" height="34.5"/>
+                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" image="close"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="closeWindow:" destination="iN0-l3-epB" eventType="touchUpInside" id="rrq-Wq-ses"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="ZWy-Pb-yYt" firstAttribute="height" secondItem="gNT-At-Fxn" secondAttribute="height" id="due-9U-Vst"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="jeM-u9-0vH">
+                            <rect key="frame" x="0.0" y="34.5" width="308.5" height="308.5"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Nzb-iZ-yQv">
+                                    <rect key="frame" x="0.0" y="0.0" width="308.5" height="59.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCe-lN-Ccz">
+                                            <rect key="frame" x="0.0" y="0.0" width="59.5" height="59.5"/>
+                                            <color key="backgroundColor" red="0.85043728351593018" green="0.21816034615039825" blue="0.15920260548591614" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                            <state key="normal">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="oxD-NX-Z9B"/>
+                                                <action selector="flatRedBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="8Br-4B-3j8"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cz3-Gd-BBY">
+                                            <rect key="frame" x="62.5" y="0.0" width="59" height="59.5"/>
+                                            <color key="backgroundColor" red="0.85262101888656616" green="0.42218321561813354" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatOrangeBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="a29-oF-5f0"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="UVr-NT-Kci"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQW-Ox-cE9">
+                                            <rect key="frame" x="124.5" y="0.0" width="59.5" height="59.5"/>
+                                            <color key="backgroundColor" red="0.97670525312423706" green="0.60546392202377319" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatYellowBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="cua-TF-EZI"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="KyJ-Rm-43e"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fn-Yy-enD">
+                                            <rect key="frame" x="187" y="0.0" width="59" height="59.5"/>
+                                            <color key="backgroundColor" red="0.9212072491645813" green="0.84832113981246948" blue="0.62377804517745972" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatSandBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="pc7-uf-AhR"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="4ax-kk-qF8"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlq-DZ-t72">
+                                            <rect key="frame" x="249" y="0.0" width="59.5" height="59.5"/>
+                                            <color key="backgroundColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatBlackBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="5wC-Hl-s4W"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="XrQ-19-uOk"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="HCh-1b-DYd">
+                                    <rect key="frame" x="0.0" y="62.5" width="308.5" height="59"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBy-nP-P4K">
+                                            <rect key="frame" x="0.0" y="0.0" width="59.5" height="59"/>
+                                            <color key="backgroundColor" red="0.46620205044746399" green="0.15637357532978058" blue="0.6434749960899353" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatMagentaBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Fge-9t-rFb"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="f75-UV-ziZ"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eqz-gc-LF9">
+                                            <rect key="frame" x="62.5" y="0.0" width="59" height="59"/>
+                                            <color key="backgroundColor" red="0.18998533487319946" green="0.35768887400627136" blue="0.43821841478347778" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatTealBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="ZgP-wc-qAU"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="WMV-T5-8sk"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gut-dY-IZr">
+                                            <rect key="frame" x="124.5" y="0.0" width="59.5" height="59"/>
+                                            <color key="backgroundColor" red="0.19376453757286072" green="0.50850099325180054" blue="0.85232251882553101" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatSkyBlueBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="VLx-tQ-5vE"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="MRK-IJ-IBS"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feq-jJ-UNS">
+                                            <rect key="frame" x="187" y="0.0" width="59" height="59"/>
+                                            <color key="backgroundColor" red="0.1911550909280777" green="0.6378670334815979" blue="0.26147949695587158" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatGreenBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="RHn-Pd-Xzx"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="LN0-lb-Mvy"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umw-50-L0u">
+                                            <rect key="frame" x="249" y="0.0" width="59.5" height="59"/>
+                                            <color key="backgroundColor" red="0.18198148906230927" green="0.69426733255386353" blue="0.53024792671203613" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatMintBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="2OX-CB-pb6"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="GfY-9j-PHl"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="j6U-yQ-c3d">
+                                    <rect key="frame" x="0.0" y="124.5" width="308.5" height="59.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ4-RY-KUm">
+                                            <rect key="frame" x="0.0" y="0.0" width="59.5" height="59.5"/>
+                                            <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatWhiteBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="fXr-oZ-LF0"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="TgH-4G-vsN"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Hu-78-33g">
+                                            <rect key="frame" x="62.5" y="0.0" width="59" height="59.5"/>
+                                            <color key="backgroundColor" red="0.51784205436706543" green="0.58159953355789185" blue="0.58617168664932251" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatGreyBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="PtF-LV-yiN"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="eug-pR-d0R"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFj-IA-IrT">
+                                            <rect key="frame" x="124.5" y="0.0" width="59.5" height="59.5"/>
+                                            <color key="backgroundColor" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatForestGreenBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="lFs-xU-Kem"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="aSq-Py-6an"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47F-j1-2Yk">
+                                            <rect key="frame" x="187" y="0.0" width="59" height="59.5"/>
+                                            <color key="backgroundColor" red="0.27836513519287109" green="0.18530510365962982" blue="0.59323644638061523" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatPurpleBtnPleassed:" destination="iN0-l3-epB" eventType="touchUpInside" id="AuL-MW-x1w"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="3q4-h5-FMG"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipd-5x-v7q">
+                                            <rect key="frame" x="249" y="0.0" width="59.5" height="59.5"/>
+                                            <color key="backgroundColor" red="0.29085952043533325" green="0.20994566380977631" blue="0.14615128934383392" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatBrownBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="5r3-dl-dIa"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Smz-vY-8EJ"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="7VC-Qm-Y5U">
+                                    <rect key="frame" x="0.0" y="187" width="308.5" height="59"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDO-KH-L5A">
+                                            <rect key="frame" x="0.0" y="0.0" width="59.5" height="59"/>
+                                            <color key="backgroundColor" red="0.28728589415550232" green="0.1402067244052887" blue="0.30659055709838867" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatPlumBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="pgR-qt-ICu"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="i9G-eG-V8G"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0N-kU-ah5">
+                                            <rect key="frame" x="62.5" y="0.0" width="59" height="59"/>
+                                            <color key="backgroundColor" red="0.89126098155975342" green="0.3545563817024231" blue="0.39968371391296387" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatWatermelonBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="CEv-SD-GTq"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Hlk-rN-gkk"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z05-ZC-WFm">
+                                            <rect key="frame" x="124.5" y="0.0" width="59.5" height="59"/>
+                                            <color key="backgroundColor" red="0.59489071369171143" green="0.74986636638641357" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatLimeBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="FUa-Wl-zw5"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="7ky-TR-Tj4"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pf2-Ah-Yag">
+                                            <rect key="frame" x="187" y="0.0" width="59" height="59"/>
+                                            <color key="backgroundColor" red="0.91498154401779175" green="0.37833490967750549" blue="0.73496383428573608" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatPinkBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="wlZ-mw-6a0"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="pYr-GK-f3r"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dR4-Xh-LVE">
+                                            <rect key="frame" x="249" y="0.0" width="59.5" height="59"/>
+                                            <color key="backgroundColor" red="0.38526773452758789" green="0.13679999113082886" blue="0.1175478994846344" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatMaroonBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="YOK-wv-fm2"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="b1O-CH-kum"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="AIx-ea-cSB">
+                                    <rect key="frame" x="0.0" y="249" width="308.5" height="59.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hn-Ud-hAM">
+                                            <rect key="frame" x="0.0" y="0.0" width="59.5" height="59.5"/>
+                                            <color key="backgroundColor" red="0.47660902142524719" green="0.37373736500740051" blue="0.28653344511985779" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatCoffeBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="b1d-wq-8Hb"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="QTr-av-mch"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcz-Pp-mhO">
+                                            <rect key="frame" x="62.5" y="0.0" width="59" height="59.5"/>
+                                            <color key="backgroundColor" red="0.66902792453765869" green="0.73128575086593628" blue="0.94889926910400391" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="FlatPowderBlue:" destination="iN0-l3-epB" eventType="touchUpInside" id="FgA-iA-flS"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="LiC-Dw-r9b"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8df-Sc-EJD">
+                                            <rect key="frame" x="124.5" y="0.0" width="59.5" height="59.5"/>
+                                            <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="StrawberryBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="qv9-PC-s6i"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="YD5-5w-8Ac"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8a-di-5sQ">
+                                            <rect key="frame" x="187" y="0.0" width="59" height="59.5"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="LemonBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="eCF-6E-59x"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="ikp-xf-dsV"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhw-I4-cU1">
+                                            <rect key="frame" x="249" y="0.0" width="59.5" height="59.5"/>
+                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="MarashinoBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="0Hd-gO-gYa"/>
+                                                <action selector="colorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="vhe-u8-x3M"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="jeM-u9-0vH" secondAttribute="height" multiplier="1:1" id="pxb-WF-f77"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="gNT-At-Fxn" firstAttribute="height" secondItem="MII-TF-CCW" secondAttribute="height" multiplier="0.1" priority="900" id="k1p-si-f3x"/>
+                        <constraint firstItem="jeM-u9-0vH" firstAttribute="height" secondItem="MII-TF-CCW" secondAttribute="height" multiplier="0.9" id="u5T-dV-kBB"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="LAB-ll-uof" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.1" id="80E-mr-lmi"/>
+                <constraint firstItem="MII-TF-CCW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="9JA-Rx-6BT"/>
+                <constraint firstItem="MII-TF-CCW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZZs-8P-DP3"/>
+                <constraint firstItem="ZWy-Pb-yYt" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.9" id="ei4-gE-fRk"/>
+                <constraint firstAttribute="bottom" secondItem="MII-TF-CCW" secondAttribute="bottom" id="nQn-Nl-d5U"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="3"/>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                    <real key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                    <real key="value" value="0.5"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                    <size key="value" width="2" height="2"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                    <color key="value" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="MomstackView" destination="jeM-u9-0vH" id="9z1-iy-tUj"/>
+                <outlet property="lblSelectColor" destination="ZWy-Pb-yYt" id="rBa-Ml-YVu"/>
+                <outlet property="purpleBrn" destination="mBy-nP-P4K" id="Jsy-MB-FeV"/>
+                <outlet property="topStackView" destination="gNT-At-Fxn" id="q2c-C3-8tW"/>
+                <outletCollection property="colorOultet" destination="ZCe-lN-Ccz" collectionClass="NSMutableArray" id="nyF-Dv-3Yx"/>
+                <outletCollection property="colorOultet" destination="Cz3-Gd-BBY" collectionClass="NSMutableArray" id="nVI-m1-kAD"/>
+                <outletCollection property="colorOultet" destination="hQW-Ox-cE9" collectionClass="NSMutableArray" id="Lg2-jf-oWx"/>
+                <outletCollection property="colorOultet" destination="5fn-Yy-enD" collectionClass="NSMutableArray" id="oqu-Xj-1an"/>
+                <outletCollection property="colorOultet" destination="xlq-DZ-t72" collectionClass="NSMutableArray" id="3Dn-2q-TI6"/>
+                <outletCollection property="colorOultet" destination="mBy-nP-P4K" collectionClass="NSMutableArray" id="uBv-72-kIB"/>
+                <outletCollection property="colorOultet" destination="Eqz-gc-LF9" collectionClass="NSMutableArray" id="PBS-f3-xpk"/>
+                <outletCollection property="colorOultet" destination="gut-dY-IZr" collectionClass="NSMutableArray" id="b5U-fa-rZL"/>
+                <outletCollection property="colorOultet" destination="feq-jJ-UNS" collectionClass="NSMutableArray" id="TvT-ng-bdz"/>
+                <outletCollection property="colorOultet" destination="umw-50-L0u" collectionClass="NSMutableArray" id="pnN-5L-u6W"/>
+                <outletCollection property="colorOultet" destination="ZZ4-RY-KUm" collectionClass="NSMutableArray" id="9Ny-Bd-W4O"/>
+                <outletCollection property="colorOultet" destination="1Hu-78-33g" collectionClass="NSMutableArray" id="ux3-Cd-0Y9"/>
+                <outletCollection property="colorOultet" destination="EFj-IA-IrT" collectionClass="NSMutableArray" id="uly-mi-tfE"/>
+                <outletCollection property="colorOultet" destination="47F-j1-2Yk" collectionClass="NSMutableArray" id="jPV-Yk-MIO"/>
+                <outletCollection property="colorOultet" destination="ipd-5x-v7q" collectionClass="NSMutableArray" id="zjT-Wh-pt3"/>
+                <outletCollection property="colorOultet" destination="kDO-KH-L5A" collectionClass="NSMutableArray" id="dLI-Qs-7Jy"/>
+                <outletCollection property="colorOultet" destination="H0N-kU-ah5" collectionClass="NSMutableArray" id="XH7-li-Waj"/>
+                <outletCollection property="colorOultet" destination="z05-ZC-WFm" collectionClass="NSMutableArray" id="EH3-c2-oYb"/>
+                <outletCollection property="colorOultet" destination="Pf2-Ah-Yag" collectionClass="NSMutableArray" id="Tkv-XD-Xww"/>
+                <outletCollection property="colorOultet" destination="dR4-Xh-LVE" collectionClass="NSMutableArray" id="2lD-a2-JP1"/>
+                <outletCollection property="colorOultet" destination="8Hn-Ud-hAM" collectionClass="NSMutableArray" id="oMD-hD-us8"/>
+                <outletCollection property="colorOultet" destination="hcz-Pp-mhO" collectionClass="NSMutableArray" id="43w-LR-cQ0"/>
+                <outletCollection property="colorOultet" destination="8df-Sc-EJD" collectionClass="NSMutableArray" id="afk-1I-WO7"/>
+                <outletCollection property="colorOultet" destination="x8a-di-5sQ" collectionClass="NSMutableArray" id="ycQ-3q-4wT"/>
+                <outletCollection property="colorOultet" destination="Hhw-I4-cU1" collectionClass="NSMutableArray" id="aHV-B8-hzi"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="270" height="270"/>
+    </resources>
+</document>
